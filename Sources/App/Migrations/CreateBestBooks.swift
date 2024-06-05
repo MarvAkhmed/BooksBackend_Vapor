@@ -21,6 +21,7 @@ struct CreateBestBooks: Migration {
             .field("author_id", .string)
             .field("created_at", .string)
             .field("updated_at", .string)
+            .field("pdf_url", .string)
             .create()
     }
     

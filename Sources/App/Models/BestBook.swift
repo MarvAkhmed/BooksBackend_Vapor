@@ -43,6 +43,9 @@ final class BestBook: Model, Content {
     @Field(key: "updated_at")
     var updatedAt: String
 
+    @Field(key: "pdf_url")
+    var pdfURL: String?
+    
     init() { }
 
     init(image: String? = nil,
@@ -54,7 +57,8 @@ final class BestBook: Model, Content {
          publisherId: String,
          authorId: String,
          createdAt: String,
-         updatedAt: String) {
+         updatedAt: String,
+         pdfURL: String? = nil ) {
         self.image = image
         self.title = title
         self.subtitle = subtitle
@@ -65,5 +69,6 @@ final class BestBook: Model, Content {
         self.authorId = authorId
         self.createdAt = createdAt
         self.updatedAt = updatedAt
+        self.pdfURL = pdfURL
     }
 }

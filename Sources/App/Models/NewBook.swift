@@ -38,6 +38,9 @@ final class NewBook: Model, Content {
     @Field(key: "updated_at")
     var updatedAt: String?
     
+    @Field(key: "pdf_url")
+    var pdfURL: String?
+    
     init() { }
     
     init(id: UUID? = nil,
@@ -48,7 +51,8 @@ final class NewBook: Model, Content {
          description: String,
          releasedOn: String,
          publisherId: String? = nil,
-         authorId: String) {
+         authorId: String,
+         pdfURL: String? = nil) {
         self.id = id
         self.image = image
         self.title = title
@@ -58,5 +62,6 @@ final class NewBook: Model, Content {
         self.releasedOn = releasedOn
         self.publisherId = publisherId
         self.authorId = authorId
+        self.pdfURL = pdfURL
     }
 }

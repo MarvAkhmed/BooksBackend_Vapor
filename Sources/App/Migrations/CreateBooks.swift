@@ -22,6 +22,7 @@ struct CreateNewBooks: Migration {
             .field("author_id", .string, .required)
             .field("created_at", .string)
             .field("updated_at", .string)
+            .field("pdf_url", .string)
             .create()
     }
     
